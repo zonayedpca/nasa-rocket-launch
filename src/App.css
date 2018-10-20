@@ -1,32 +1,92 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,900');
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+strong {
+  font-weight: 900;
+}
+
+.header-area {
   text-align: center;
+  padding: 50px 0;
+  background-image: url('bg.png');
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(24,38,36,1);
+  background-color: -moz-radial-gradient(center, ellipse farthest-corner, rgba(24,38,36,1) 0%, rgba(20,31,31,1) 100%);
+  background-color: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(24,38,36,1)), color-stop(100%, rgba(20,31,31,1)));
+  background-color: -webkit-radial-gradient(center, ellipse farthest-corner, rgba(24,38,36,1) 0%, rgba(20,31,31,1) 100%);
+  background-color: -o-radial-gradient(center, ellipse farthest-corner, rgba(24,38,36,1) 0%, rgba(20,31,31,1) 100%);
+  background-color: -ms-radial-gradient(center, ellipse farthest-corner, rgba(24,38,36,1) 0%, rgba(20,31,31,1) 100%);
+  background-color: radial-gradient(ellipse at center, rgba(24,38,36,1) 0%, rgba(20,31,31,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#182624', endColorstr='#141f1f', GradientType=1 );
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.logo img {
+  width: 120px;
+  -webkit-animation: launch 1s ease-in 0s infinite alternate ;
+ animation: launch 1s ease-in 0s infinite alternate ;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.logo p {
+  color: #fcf1df;
+  margin-top: 15px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 300;
 }
 
-.App-link {
-  color: #61dafb;
+.logo p strong {
+  font-weight: 900;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@-webkit-keyframes launch {
+  0%{
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
   }
-  to {
-    transform: rotate(360deg);
+  100%{
+	-webkit-transform: translateY(15px);
+	transform: translateY(15px);
   }
+}
+
+@keyframes launch {
+  0%{
+	transform: translateY(0);
+  }
+  100%{
+	transform: translateY(15px);
+  }
+}
+
+.countdown {
+  padding: 100px 0;
+}
+
+.countdown h4 {
+  text-transform: uppercase;
+  color: #fcf1df;
+}
+
+.countdown .time {
+  font-size: 62px;
+  font-weight: 900;
+}
+
+.time li {
+  display: inline-block;
+  margin: 0 10px;
+  color: #f1dec2;
+}
+
+.time li strong {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 900;
+  display: block;
+  color: #7d7564;
 }
