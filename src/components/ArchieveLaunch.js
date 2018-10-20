@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { BarLoader } from 'react-spinners';
 
 import Item from './Item';
 
@@ -9,7 +10,7 @@ class ArchieveLaunch extends Component {
   }
 
   async getData() {
-    const { data } = await axios('https://launchlibrary.net/1.4/launch/next/10');
+    const { data } = await axios('https://launchlibrary.net/1.4/launch?offset=0&limit=5&sort=desc&enddate=2018-10-18');
     this.setState({data});
   }
 
@@ -21,13 +22,16 @@ class ArchieveLaunch extends Component {
     const { data } = this.state;
 
     if(!data) {
-      return <p>Loading...</p>
+      return <div className="load">
+        <BarLoader color={'#000'} />
+      </div>
     }
 
     return (
-      <div className="next-launch">
+      <div className="arc-launch">
+        <h3>Past Launches</h3>
         {data.launches.map(oneData => (
-          <Item />
+          <Item data={oneData} />
         ))}
       </div>
     )

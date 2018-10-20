@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+import { BarLoader } from 'react-spinners';
 
 import { getDay, getHour, getMinute, getSecond } from '../utils/timePart';
 
@@ -10,8 +12,8 @@ class Countdown extends Component {
   }
 
   async getData() {
-    const { data } = await axios('https://launchlibrary.net/1.4/launch/next/2');
-    this.setState({ data: data.launches[1] });
+    const { data } = await axios('https://launchlibrary.net/1.4/launch/next/1?status=1');
+    this.setState({ data: data.launches[0] });
   }
 
   getInterval() {
@@ -24,7 +26,6 @@ class Countdown extends Component {
   }
 
   getExactTime(dateNow) {
-    console.log();
     const countDownTime = (Date.parse(this.state.data.windowstart));
     let difference = countDownTime - dateNow;
     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
@@ -46,7 +47,9 @@ class Countdown extends Component {
 
     if(!data || !difference) {
       return (
-        <p>Loading...</p>
+        <div className="load">
+          <BarLoader color={'#182624'} />
+        </div>
       )
     }
 
@@ -71,7 +74,7 @@ class Countdown extends Component {
             <strong>Second</strong>
           </li>
         </ul>
-        <a className="btn btn-more"></a>
+        <Link to={`/launch/${data.id}`} className="btn btn-more">More Details</Link>
         <p><em>All times are displayed in UTC</em></p>
       </div>
     )

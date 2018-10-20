@@ -15,7 +15,7 @@ export default () => (
         </div>
       </div>
     </header>
-    <section className="content">
+    <section className="content section-pad">
       <div className="container">
         <div className="row">
           <div className="col-md-8">

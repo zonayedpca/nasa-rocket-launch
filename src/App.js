@@ -13,7 +13,7 @@ class App extends Component {
     return (
       <div className="App">
         <Route exact path="/" component={Home} />
-        <Route exact path="/launch/:id" component={SinglePage} />
+        <Route path="/launch/:id" render={(props) => <SinglePage {...props} />} />
         <Footer />
       </div>
     );
