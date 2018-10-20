@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/nasa-rocket-launch/precache-manifest.be928ec9f5f4ce722ff4ceef9d0d253a.js"
+  "/nasa-rocket-launch/precache-manifest.83dd6039adb8e4efea147eef8a3e41c4.js"
 );
 
 workbox.clientsClaim();
