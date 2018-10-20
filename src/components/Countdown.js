@@ -10,8 +10,8 @@ class Countdown extends Component {
   }
 
   async getData() {
-    const { data } = await axios('https://launchlibrary.net/1.4/launch/next/1');
-    this.setState({ data: data.launches[0] });
+    const { data } = await axios('https://launchlibrary.net/1.4/launch/next/2');
+    this.setState({ data: data.launches[1] });
   }
 
   getInterval() {
