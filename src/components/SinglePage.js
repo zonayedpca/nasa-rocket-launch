@@ -3,7 +3,6 @@ import axios from 'axios';
 import { BarLoader } from 'react-spinners';
 
 import Brand from './Brand';
-import NextLaunch from './NextLaunch';
 import HeaderSingle from './HeaderSingle';
 import Content from './Content';
 import Info from './Info';

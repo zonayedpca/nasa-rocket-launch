@@ -1,14 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
-import GoogleMap from './GoogleMap';
 
 const Info = ({data: {rocket, location, lsp}}) => (
   <div className="info">
     <ul className="list-inline">
       <li><img src={rocket.imageURL} alt="rocket-pic" /></li>
-      <li><h4>Name: {rocket.name}</h4></li>
-      <li><p>({rocket.configuration})</p></li>
     </ul>
     <ul className="location">
       <h5>Location</h5>
@@ -26,8 +21,8 @@ const Info = ({data: {rocket, location, lsp}}) => (
       <li>{lsp.name} ({lsp.abbrev})</li>
       <li>Country: {lsp.countryCode}</li>
       <li>
-        <ul className="list-inline">
-          <p>More Info</p>
+        <ul className="m10 list-inline">
+          <h5>More Info</h5>
           {lsp.infoURLs.map((infoURL, index) => (
             <li><a href={`${infoURL}`}>{`Info ${index + 1}`}</a></li>
           ))}

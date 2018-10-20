@@ -3,8 +3,6 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { BarLoader } from 'react-spinners';
 
-import { getDay, getHour, getMinute, getSecond } from '../utils/timePart';
-
 class Countdown extends Component {
   state = {
     data: '',

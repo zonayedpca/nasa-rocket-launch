@@ -16,7 +16,6 @@ class NextLaunch extends Component {
 
   componentDidMount() {
     this.getData();
-    // this.props.match && console.log(this.props.match.params.id);
   }
 
   render() {
@@ -32,7 +31,7 @@ class NextLaunch extends Component {
       <div className="next-launch">
         <h3>Next Launches</h3>
         {data.launches.map(oneData => (
-          <Item data={oneData} hello={console.log(oneData)} />
+          <Item data={oneData} />
         ))}
       </div>
     )

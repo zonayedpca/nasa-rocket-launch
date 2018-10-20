@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import statusFunc from '../utils/status';
 
@@ -21,15 +20,15 @@ const Content = ({data: { name, windowstart, status, changed, vidURLs, missions,
       <h5>Missions</h5>
       {missions.map(mission => (
         <React.Fragment key={mission.id}>
-          <li>{mission.name}</li>
-          <li>{mission.description}</li>
+          <li><strong>Name:</strong> {mission.name}</li>
+          <li><strong>Description:</strong>{mission.description}</li>
           <ul>
             {mission.agencies.map(agency => (
               <React.Fragment>
                 <li>{agency.name} ({agency.abbrev})</li>
                 <li>Country: {agency.countryCode}</li>
-                <ul className="list-inline">
-                  <p>More Info</p>
+                <ul className="m10 list-inline">
+                  <h5>More Info</h5>
                   {agency.infoURLs.map((infoURL, index) => (
                     <li><a href={`${infoURL}`}>{`Info ${index + 1}`}</a></li>
                   ))}

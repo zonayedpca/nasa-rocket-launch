@@ -1,8 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,900');
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+h3 {
+  font-weight: 900;
+}
+
+h5 {
+  color: rgba(0, 0, 0, 0.75);
+  font-weight: 900;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
+  font-size: 18px;
   background-color: #e9ebee;
 }
 
@@ -13,6 +34,10 @@ strong {
 a:hover,
 a:focus {
   text-decoration: none;
+}
+
+.m10 h5 {
+  margin-left: 5px;
 }
 
 .btn-more {
@@ -129,7 +154,7 @@ a:focus {
   text-transform: uppercase;
   font-weight: 900;
   display: block;
-  color: #7d7564;
+  color: #bcae97;
 }
 
 .item {
@@ -160,7 +185,7 @@ a:focus {
 
 .single {
   color: #333;
-  padding: 15px 20px;
+  padding: 15px 25px;
   background: #fff;
   margin: 15px 0;
   border-radius: 4px;
@@ -173,7 +198,7 @@ a:focus {
 
 .intro h2 {
   display: inline-block;
-  background-color: #fcf1df;
+  background-color: #bcae97;
   padding: 5px 15px;
   border-radius: 4px;
 }
@@ -193,6 +218,9 @@ a:focus {
 }
 
 .footer-area {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 900;
   padding: 50px 0;
   padding-bottom: 100px;
   color: #fcf1df;
