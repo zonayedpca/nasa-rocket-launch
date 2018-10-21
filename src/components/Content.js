@@ -23,7 +23,7 @@ const Content = ({data: { name, windowstart, status, changed, vidURLs, missions,
           <li><strong>Name:</strong> {mission.name}</li>
           <li><strong>Description:</strong>{mission.description}</li>
           <ul>
-            {mission.agencies.map(agency => (
+            {mission.agencies && mission.agencies.map(agency => (
               <React.Fragment key={agency.id}>
                 <li>{agency.name} ({agency.abbrev})</li>
                 <li>Country: {agency.countryCode}</li>
