@@ -13,7 +13,7 @@ const Content = ({data: { name, windowstart, status, changed, vidURLs, missions,
     <ul className="video-urls list-inline">
       <li><strong>Video Links:</strong></li>
       {vidURLs.map((oneVid, index) => (
-        <li><a href={`${oneVid}`}>{`Link ${index + 1}`}</a></li>
+        <li key={index}><a href={`${oneVid}`}>{`Link ${index + 1}`}</a></li>
       ))}
     </ul>
     <ul>
@@ -24,13 +24,13 @@ const Content = ({data: { name, windowstart, status, changed, vidURLs, missions,
           <li><strong>Description:</strong>{mission.description}</li>
           <ul>
             {mission.agencies.map(agency => (
-              <React.Fragment>
+              <React.Fragment key={agency.id}>
                 <li>{agency.name} ({agency.abbrev})</li>
                 <li>Country: {agency.countryCode}</li>
                 <ul className="m10 list-inline">
                   <h5>More Info</h5>
                   {agency.infoURLs.map((infoURL, index) => (
-                    <li><a href={`${infoURL}`}>{`Info ${index + 1}`}</a></li>
+                    <li key={index}><a href={`${infoURL}`}>{`Info ${index + 1}`}</a></li>
                   ))}
                 </ul>
               </React.Fragment>
@@ -40,7 +40,7 @@ const Content = ({data: { name, windowstart, status, changed, vidURLs, missions,
             <ul>
               <h5>Payloads</h5>
               {mission.payloads.map((payload, index) => (
-                <li>{payload.name}</li>
+                <li key={index}>{payload.name}</li>
               ))}
             </ul>
           </li>

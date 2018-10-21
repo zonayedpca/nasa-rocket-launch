@@ -8,7 +8,7 @@ const Info = ({data: {rocket, location, lsp}}) => (
     <ul className="location">
       <h5>Location</h5>
       {location.pads.length > 0 && location.pads.map(onePad => (
-        <React.Fragment>
+        <React.Fragment key={onePad.id}>
           <li>Name: {onePad.name}</li>
           <li>Latitude: {onePad.latitude}</li>
           <li>Longitude: {onePad.longitude}</li>
@@ -24,7 +24,7 @@ const Info = ({data: {rocket, location, lsp}}) => (
         <ul className="m10 list-inline">
           <h5>More Info</h5>
           {lsp.infoURLs.map((infoURL, index) => (
-            <li><a href={`${infoURL}`}>{`Info ${index + 1}`}</a></li>
+            <li key={index}><a href={`${infoURL}`}>{`Info ${index + 1}`}</a></li>
           ))}
         </ul>
       </li>
@@ -32,7 +32,7 @@ const Info = ({data: {rocket, location, lsp}}) => (
     </ul>
     <ul>
       {rocket.agencies.length > 0 && rocket.agencies.map((oneAgency, index) => (
-        <React.Fragment>
+        <React.Fragment key={index}>
           <h5>{`Agency ${index + 1}`}</h5>
           <li>Name: {oneAgency.name}</li>
           <li>Country: {oneAgency.countryCode}</li>

@@ -31,7 +31,7 @@ class ArchieveLaunch extends Component {
       <div className="arc-launch">
         <h3>Past Launches</h3>
         {data.launches.map(oneData => (
-          <Item data={oneData} />
+          <Item key={oneData.id} data={oneData} />
         ))}
       </div>
     )

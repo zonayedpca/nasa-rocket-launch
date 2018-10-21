@@ -31,7 +31,7 @@ class NextLaunch extends Component {
       <div className="next-launch">
         <h3>Next Launches</h3>
         {data.launches.map(oneData => (
-          <Item data={oneData} />
+          <Item key={oneData.id} data={oneData} />
         ))}
       </div>
     )

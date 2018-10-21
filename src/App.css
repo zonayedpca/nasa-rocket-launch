@@ -154,7 +154,9 @@ a:focus {
   text-transform: uppercase;
   font-weight: 900;
   display: block;
-  color: #bcae97;
+  background: #182624;
+  padding: 2px 5px;
+  border-radius: 4px;
 }
 
 .item {
