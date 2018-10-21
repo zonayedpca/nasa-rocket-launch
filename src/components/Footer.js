@@ -7,6 +7,7 @@ export default () => (
         <ul className="list-inline text-center">
           <li>Code Corn</li>
           <li>NASA Space Apps Challenge 2018</li>
+          <li><a href="https://github.com/zonayedpca/nasa-rocket-launch/issues">Provide Feedback</a></li>
         </ul>
       </div>
     </div>
