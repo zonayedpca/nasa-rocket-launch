@@ -3,6 +3,7 @@ import axios from 'axios';
 import { BarLoader } from 'react-spinners';
 
 import Item from './Item';
+import dateFormat from '../utils/dateFormat';
 
 class ArchieveLaunch extends Component {
   state = {
@@ -10,7 +11,8 @@ class ArchieveLaunch extends Component {
   }
 
   async getData() {
-    const { data } = await axios('https://launchlibrary.net/1.4/launch?offset=0&limit=5&sort=desc&enddate=2018-10-18');
+    const today = dateFormat(Date.now());
+    const { data } = await axios(`https://launchlibrary.net/1.4/launch?offset=0&limit=5&sort=desc&enddate=${today}`);
     this.setState({data});
   }
 

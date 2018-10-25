@@ -31,7 +31,7 @@ const Info = ({data: {rocket, location, lsp}}) => (
       <li><a href={`${lsp.wikiURL}`}>Read More</a></li>
     </ul>
     <ul>
-      {rocket.agencies.length > 0 && rocket.agencies.map((oneAgency, index) => (
+      {rocket.agencies && rocket.agencies.length > 0 && rocket.agencies.map((oneAgency, index) => (
         <React.Fragment key={index}>
           <h5>{`Agency ${index + 1}`}</h5>
           <li>Name: {oneAgency.name}</li>
